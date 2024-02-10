@@ -1,13 +1,291 @@
+@import "mixins";
+
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 200 to 800 */
+
+.karla-font  {
+  font-family: "Karla";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  li {
+    font-weight: 900;
+    font-size: 1.25rem;
+  }
+  & > p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    width: 14.2rem;
+    letter-spacing: 1px;
+    margin-top: -30px;
+    line-height: 19px;
+  }
+}
+/* <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 400 to 700 */
+
+.markazi-text-font {
+  font-family: "Markazi Text";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #F4CE14;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: -75px;
+
+  }
+  & .sec-heading {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+
+body {
+  padding: 0;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  
+}
+
+ .container {
+  max-width: 920px;
+  padding: 1rem;
+  min-width: 930px;
+  margin-inline: auto;
+} 
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+
+}
+
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+
+.ul-1 {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: center;
+  padding-left: 250px;
+  margin-top: -40px;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+
+  &:link {
+    
+  }
+  &:visited {
+
+  }
+
+  &:hover {
+    
+  }
+  
+  &:active {
+
+  }
+
+}
+
+
+nav {
+  padding: 24px;
+}
+
+ul {
+  list-style: none;
+}
+
+.button-1 {
+  padding: 0.7rem 1.3rem;
+  border-radius: 16px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #F4CE14;
+  font-weight: 800;
+  color: black;
+  font-size: 1rem;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+}
+
+.button-2 {
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #F4CE14;
+  font-weight: 800;
+  color: black;
+  font-size: 1rem;
+  margin-left: 250px;
+  margin-top: 16px;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.background-hero {
+  background-color: #495E57;
+  height: 20.75rem;
+  width: 100%;
+}
+
+div h3 {
+  color: white;
+}
+
+.sec-heading {
+  font-size: 4rem;
+  font-weight: 500;
+  color: black;
+}
+
+.card {
+  width: 286px;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-text {
+  background-color: #EDEDED;
+  width: 286px;
+  height: 376px;
+  margin-top: -25px;
+  padding: 2.563rem 2.563rem 2.031rem -2.031rem;
+
+}
+
+.card-title {
+ padding-left: 10px;
+ font-size: 20px;
+ font-weight: bold;
+ padding-top: 2.563rem;
+ padding-left: 2.031rem;
+ padding-right: 2.031rem;
+}
+
+.card-price {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #FF0000;
+  padding-left: 2.031rem;
+  padding-right: 2.031rem;
+  text-align: right;
+  margin-top: -45px;
+}
+
+.card-description {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 2.031rem;
+  padding-right: 2.031rem;
+}
+
+.card-cta {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 2.563rem;
+  padding-left: 2.031rem;
+  padding-right: 2.031rem;
+  margin-top: 50px;
+}
+
+.ul-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo_2 list1 list2 list3";
+  list-style: none;
+  margin-top: -40px;
+
+}
+
+footer {
+  background-color: #EDEDED;
+  margin-top: 150px;
+  
+}
+
+.logo_2 {
+  grid-area: logo_2;
+}
+
+.list1 {
+  grid-area: list1;
+  padding-left: 4.688rem;
+  line-height: 1.5;
+  li {
+    font-weight: 500;
+  }
+}
+
+.list2 {
+  grid-area: list2;
+  padding-left: 6.125rem;
+  line-height: 1.5;
+  li {
+    font-weight: 500;
+  }
+}
+
+.list3 {
+  grid-area: list3;
+  padding-left: 6.125rem;
+  line-height: 1.5;
+  li {
+    font-weight: 500;
+  }
+}
+
+.style-li:first-child {
+  font-weight: 900;
+  display: block;
+  padding-bottom: 15px;
+  line-height: auto;
 }

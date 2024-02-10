@@ -1,0 +1,244 @@
+@import "mixins";
+
+
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 200 to 800 */
+
+.karla-font  {
+  font-family: "Karla";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  li {
+    font-weight: 900;
+    font-size: 1.25rem;
+  }
+  & > p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    width: 14.2rem;
+    letter-spacing: 1px;
+    margin-top: -30px;
+    line-height: 19px;
+  }
+}
+/* <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 400 to 700 */
+
+.markazi-text-font {
+  font-family: "Markazi Text";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #F4CE14;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: -75px;
+
+  }
+  & .sec-heading {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+
+body {
+  padding: 0;
+}
+
+code {
+  
+}
+
+.container {
+  max-width: 920px;
+  padding: 1rem;
+  min-width: 930px;
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+
+}
+@media (max-width: 50em) {
+
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+
+
+
+.card {
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include breakpoint-down(small) {
+        grid-template-columns: 1fr;
+    }
+
+    @include breakpoint-up(medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  &-image {
+
+  }
+
+  &-text {
+
+  }
+
+  &-title {
+
+  }
+
+  &-description {
+
+  }
+
+  &-cta {
+
+  }
+}
+
+.ul-1 {
+  display: flex;
+  gap: 1.75rem;
+  justify-content: center;
+  padding-left: 250px;
+  margin-top: -40px;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+
+  &:link {
+    
+  }
+  &:visited {
+
+  }
+
+  &:hover {
+
+  }
+  
+  &:active {
+
+  }
+
+}
+
+
+
+.ul-2 {
+  columns: 3;
+}
+
+nav {
+  padding: 24px;
+}
+
+ul {
+  list-style: none;
+}
+
+.button-1 {
+  padding: 0.7rem 1.3rem;
+  border-radius: 16px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #F4CE14;
+  font-weight: 800;
+  color: black;
+  font-size: 1rem;
+
+}
+
+.button-2 {
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #F4CE14;
+  font-weight: 800;
+  color: black;
+  font-size: 1rem;
+  margin-left: 250px;
+  margin-top: 16px;
+}
+
+.background-hero {
+  background-color: #495E57;
+  height: 20.75rem;
+  width: 100%;
+}
+
+div h3 {
+  color: white;
+}
+
+.sec-heading {
+  font-size: 4rem;
+  font-weight: 500;
+  color: black;
+}
+
+.card {
+  width: 286px;
+}
+
+.card-text {
+  background-color: #EDEDED;
+  width: 286px;
+  height: 376px;
+  margin-top: -20px;
+
+  p, a {
+    padding-left: 2.031rem;
+    padding-right: 2.031rem;
+  }
+  p:nth-of-type(1) {
+    padding-top: 2.563rem;
+  }
+
+  a {
+    padding-bottom: -2.563rem;
+  }
+
+
+}
+
