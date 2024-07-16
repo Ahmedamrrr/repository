@@ -1,0 +1,84 @@
+
+.login_title {
+    font-size: 1.8rem;
+}
+
+.erorr {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+    word-spacing: 0.8px;
+}
+
+
+
+ .fielderorr {
+    border: 1px solid red;
+    right: -260px;
+    background-color: white;
+    top: 25px;
+    position: absolute;
+    width: 240px;
+    z-index: 1;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    background-clip: padding-box;
+    color: #ff0000;
+    font: 14px karla;
+    line-height: 1;
+}
+
+.section-wrap {
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.fielderorr::before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    left: -17px;
+    width: 0;
+    border-width: 8px;
+    top: 15px;
+    border-right-color: red;
+}
+
+.fielderorr::after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    left: -16px;
+    width: 0;
+    border-width: 8px;
+    top: 15px;
+    border-right-color: white;
+}
+
+.erorr-color {
+    border-color: red;
+}
+
+.normal-color {
+    border-color: #666666;
+}
+
+.fieldinstruct {
+    border: 1px solid #666666;
+    color: #666666;
+}
+.fieldinstruct::before {
+    border-right-color: #666666;
+}
+
+
+
+

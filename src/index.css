@@ -15,6 +15,7 @@
 
 * {
   display: revert;
+  box-sizing: border-box;
 }
 
   li {
@@ -104,8 +105,8 @@ code {
   display: flex;
   gap: 1.75rem;
   justify-content: center;
-  padding-left: 250px;
-  margin-top: -40px;
+  padding-left: 230px;
+  margin-top: -36.5px;
   flex-wrap: wrap;
 }
 
@@ -217,6 +218,14 @@ div h3 {
   padding-right: 2.031rem;
 }
 
+.card-image img {
+  height: 239px;
+  width: 286px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+
 .card-cta {
   padding-left: 10px;
   font-size: 20px;
@@ -225,6 +234,21 @@ div h3 {
   padding-left: 2.031rem;
   padding-right: 2.031rem;
   margin-top: 50px;
+}
+
+.card-icon {
+  padding-left: 160px;
+  margin-top: -26px;
+  margin-bottom: 18px;
+  box-sizing: content-box;
+  height: 27px;
+  width: 27px;
+}
+
+.button-dis button {
+  padding: 1rem 2rem;
+  margin-left: 250px;
+  margin-top: 16px;
 }
 
 .ul-2 {
@@ -245,6 +269,8 @@ footer {
 
 .logo_2 {
   grid-area: logo_2;
+  height: 52px;
+  width: 193px;
 }
 
 .list1 {
@@ -280,7 +306,7 @@ footer {
   line-height: auto;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 5rem) {
   .even-columns {
     display: grid;
     grid-auto-flow: row;
@@ -486,10 +512,22 @@ footer {
     padding-left: 6.125rem;
     transform: none;
   }
+  li a:hover:after {
+    position: absolute;
+    bottom: -4.5px;
+    left: 0;
+    width: 100%;
+    height: 3.5px;
+    background: black;
+    content: '';
+    transition: normal 300ms ease-out all;
+  }
+  li a {
+    position: relative;
+  }
 }
 
 
 .hamburger {
   width: 24px;
-
 }
